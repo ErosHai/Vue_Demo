@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <vuex></vuex>
+</div>
+
+<template id="template">
+  <div>
+    <h2> {{ title }}  </h2>
+    <p> this is content</p>
+  </div>
+</template>
+
+<!--<script type="text/x-templete" id="ids">-->
+
+<!--</script>-->
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<script>
+
+  Vue.component('vuex', {
+    template: '#template',
+    // data 必须是个函数
+    data(){
+      return{
+        title:'abc'
+      }
+    }
+  })
+
+  const app = new Vue({
+    el: '#app',
+    data:{
+      title:'hello'
+    }
+  })
+</script>
+</body>
+</html>
